@@ -11,16 +11,18 @@ def game_start():
     """
     Assign the player to False, allowing them to choose their 
     option. Create a while loop and use if/else statements to 
-    check every possible combination of game results.
+    check every possible combination of game outcomes.
     """
     player = False
     while player == False:
-        player = input("Rock, Paper, Scissors?")
+        player = input("Rock, Paper, Scissors? ")
         if player == opposition:
             print("It's a draw!")
         elif player == "rock":
             if opposition == "paper":
-                print("You lose!", opposition, "covers", player,".")
+                print("You lose!", opposition, "covers", player)
+            else:
+                print("You win!", player, "crushes", opposition)
 
 print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
