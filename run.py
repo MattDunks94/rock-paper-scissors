@@ -6,3 +6,7 @@ player_options = ["rock", "paper", "scissors"]
 
 # Assign the opposition to a random list item.
 opposition = player_options[randint(0, 2)]
+
+print("\n---------------------")
+print("ROCK, PAPER, SCISSORS")
+print("---------------------")
