@@ -17,13 +17,27 @@ def game_start():
     while player == False:
         player = input("Rock, Paper, Scissors? ")
         if player == opposition:
-            print("It's a draw!")
+            print("\nIt's a draw!")
         elif player == "rock":
             if opposition == "paper":
-                print("You lose!", opposition, "covers", player)
+                print("\nYou lose!", opposition, "covers", player)
             else:
-                print("You win!", player, "crushes", opposition)
-
+                print("\nYou win!", player, "crushes", opposition)
+        elif player == "paper":
+            if opposition == "scissors":
+                print("\nYou lose!", opposition, "slices", player)
+            else:
+                print("You win!", player, "covers", opposition)
+        elif player == "scissors":
+            if opposition == "rock":
+                print("You lose!", opposition, "crushes", player)
+            else:
+                print("\nYou win!", player, "slices", opposition)
+        else:
+            print("\nWe do not have that in our inventory!")
+            print("Please choose 1 of the 3 options available.")
+        
+                
 print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
 print("---------------------")
