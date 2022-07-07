@@ -12,13 +12,19 @@ def start_game():
     """
     This function offers the user to play or not.
     If user types 'y' the main_game function is executed.
+    If the user types 'n' the program will terminate.
+    If the user enters anything other than 'y' or 'n' the 
+    start_game function re-executes.
     """
     play = input("Start Game? Y / N ")
 
     if play == "y":
         main_game()
+    elif play == "n":
+        quit()
     else:
-        return start_game()
+        print("\nNot a valid answer. Please try again.\n")
+        start_game()
 
 
 def main_game():
@@ -60,9 +66,10 @@ def main_game():
         else:
             print("\nWe do not have that in our inventory!")
             print("Please choose 1 of the 3 options available.\n")
+        player = False
 
-    print("Your Score:", player_score)
-    print("CPU Score:", cpu_score)
+        print("Your Score:", player_score)
+        print("CPU Score:", cpu_score)
 
                 
 print("\n---------------------")
