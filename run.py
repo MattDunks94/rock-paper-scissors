@@ -5,7 +5,7 @@ from random import randint
 player_options = ["rock", "paper", "scissors"]
 
 # Assign the opposition to a random list item.
-opposition = player_options[randint(0, 2)]
+cpu = player_options[randint(0, 2)]
 
 def game_start():
     """
@@ -13,32 +13,44 @@ def game_start():
     option. Create a while loop and use if/else statements to 
     check every possible combination of game outcomes.
     """
+    player_score = 0
+    cpu_score = 0
     player = False
+
     while player == False:
         player = input("Rock, Paper, Scissors? ")
-        if player == opposition:
+        if player == cpu:
             print("\nIt's a draw!\n")
         elif player == "rock":
-            if opposition == "paper":
-                print("\nYou lose!", opposition, "covers", player, "\n")
+            if cpu == "paper":
+                print("\nYou lose!", cpu, "covers", player, "\n")
+                cpu_score += 1
             else:
-                print("\nYou win!", player, "crushes", opposition, "\n")
+                print("\nYou win!", player, "crushes", cpu, "\n")
+                player_score += 1
         elif player == "paper":
-            if opposition == "scissors":
-                print("\nYou lose!", opposition, "slices", player, "\n")
+            if cpu == "scissors":
+                print("\nYou lose!", cpu, "slices", player, "\n")
+                cpu_score += 1
             else:
-                print("\nYou win!", player, "covers", opposition, "\n")
+                print("\nYou win!", player, "covers", cpu, "\n")
+                player_score += 1
         elif player == "scissors":
-            if opposition == "rock":
-                print("You lose!", opposition, "crushes", player, "\n")
+            if cpu == "rock":
+                print("You lose!", cpu, "crushes", player, "\n")
+                cpu_score += 1
             else:
-                print("\nYou win!", player, "slices", opposition, "\n")
+                print("\nYou win!", player, "slices", cpu, "\n")
+                player_score += 1
         else:
             print("\nWe do not have that in our inventory!")
             print("Please choose 1 of the 3 options available.\n")
 
 
-        
+    
+    print("Your Score:", player_score)
+    print("CPU Score:", cpu_score)
+
                 
 print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
