@@ -7,7 +7,21 @@ player_options = ["rock", "paper", "scissors"]
 # Assign the opposition to a random list item.
 cpu = player_options[randint(0, 2)]
 
-def game_start():
+
+def start_game():
+    """
+    This function offers the user to play or not.
+    If user types 'y' the main_game function is executed.
+    """
+    play = input("Start Game? Y / N ")
+
+    if play == "y":
+        main_game()
+    else:
+        return start_game()
+
+
+def main_game():
     """
     Assign the player to False, allowing them to choose their 
     option. Create a while loop and use if/else statements to 
@@ -18,7 +32,8 @@ def game_start():
     player = False
 
     while player == False:
-        player = input("Rock, Paper, Scissors? ")
+
+        player = input("\nRock, Paper, Scissors? ")
         if player == cpu:
             print("\nIt's a draw!\n")
         elif player == "rock":
@@ -46,8 +61,6 @@ def game_start():
             print("\nWe do not have that in our inventory!")
             print("Please choose 1 of the 3 options available.\n")
 
-
-    
     print("Your Score:", player_score)
     print("CPU Score:", cpu_score)
 
@@ -56,4 +69,4 @@ print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
 print("---------------------")
 
-game_start()
+start_game()
