@@ -4,6 +4,13 @@ from random import randint
 # Create player options list.
 player_options = ["rock", "paper", "scissors"]
 
+player_score = 0
+cpu_score = 0
+player = False
+
+# Assign the opposition to a random list item from player_options.
+cpu = player_options[randint(0, 2)]
+
 
 def start_game():
     """
@@ -16,7 +23,7 @@ def start_game():
     play = input("Start Game? Y / N ")
 
     if play == "y":
-        main_game()
+        main_game(player, cpu, player_score, cpu_score)
     elif play == "n":
         quit()
     else:
@@ -24,19 +31,12 @@ def start_game():
         start_game()
 
 
-def main_game():
+def main_game(player, cpu, player_score, cpu_score):
     """
     Assign the player to False, allowing them to choose their 
     option. Create a while loop and use if/else statements to 
     check every possible combination of game outcomes.
     """
-    player_score = 0
-    cpu_score = 0
-    player = False
-
-    # Assign the opposition to a random list item from player_options.
-    cpu = player_options[randint(0, 2)]
-
     while player == False:
 
         player = input("\nRock, Paper, Scissors?\n")
@@ -75,15 +75,31 @@ def main_game():
             print("Please choose 1 of the 3 options available.\n")
         player = False
         cpu = player_options[randint(0, 2)]
-
+        
         print("Your Score:", player_score)
         print("CPU Score:", cpu_score)
+
+
+def end_game(player_score, cpu_score):
+    if player_score == 5:
+        game_restart = input("You WIN! Play again? Y / N ")
+    elif cpu_score == 5:
+        game_restart = input("You LOSE! Play again? Y / N ")
+    if game_restart == "y":
+        main_game(player, cpu, player_score, cpu_score)
+        player_score = 0
+        cpu_score = 0
+    elif game_restart == "n":
+        quit()
+    else:
+        print("Not a valid option, please try again.")
 
 
 def main():
     # All functions created into one main function.
     start_game()
-    main_game()
+    main_game(player, cpu, player_score, cpu_score)
+    end_game(player_score, cpu_score)
 
 
 print("\n---------------------")
