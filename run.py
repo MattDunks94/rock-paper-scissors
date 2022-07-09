@@ -4,8 +4,10 @@ from random import randint
 # Create player options list.
 player_options = ["rock", "paper", "scissors"]
 
+# Create player and cpu scores.
 player_score = 0
 cpu_score = 0
+
 player = False
 
 # Assign the opposition to a random list item from player_options.
@@ -17,7 +19,7 @@ def start_game():
     This function offers the user to play or not.
     If user types 'y' the main_game function is executed.
     If the user types 'n' the program will terminate.
-    If the user enters anything other than 'y' or 'n' the 
+    If the user enters anything other than 'y' or 'n' the
     start_game function re-executes.
     """
     play = input("Start Game? Y / N ")
@@ -33,9 +35,10 @@ def start_game():
 
 def main_game(player, cpu, player_score, cpu_score):
     """
-    Assign the player to False, allowing them to choose their 
-    option. Create a while loop and use if/else statements to 
+    Create a while loop and use if/else statements to
     check every possible combination of game outcomes.
+    Included print statements to display game scores/result
+    and player options used.
     """
     while player == False:
 
@@ -75,31 +78,24 @@ def main_game(player, cpu, player_score, cpu_score):
             print("Please choose 1 of the 3 options available.\n")
         player = False
         cpu = player_options[randint(0, 2)]
-        
         print("Your Score:", player_score)
         print("CPU Score:", cpu_score)
-
-
-def end_game(player_score, cpu_score):
-    if player_score == 5:
-        game_restart = input("You WIN! Play again? Y / N ")
-    elif cpu_score == 5:
-        game_restart = input("You LOSE! Play again? Y / N ")
-    if game_restart == "y":
-        main_game(player, cpu, player_score, cpu_score)
-        player_score = 0
-        cpu_score = 0
-    elif game_restart == "n":
-        quit()
-    else:
-        print("Not a valid option, please try again.")
+            
+        # If statement to check if either player scores 5.
+        # The start_game function is executed along with a print statement
+        # displaying game result, when score reaches 5.
+        if player_score == 5:
+            print("You WIN!")
+            start_game()
+        elif cpu_score == 5:
+            print("You LOST!")
+            start_game()
 
 
 def main():
-    # All functions created into one main function.
+    # All functions into one main function.
     start_game()
     main_game(player, cpu, player_score, cpu_score)
-    end_game(player_score, cpu_score)
 
 
 print("\n---------------------")
