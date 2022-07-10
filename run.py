@@ -101,7 +101,7 @@ def main():
     main_game(player, cpu, player_score, cpu_score)
 
 
-# Introduces user to program.
+# Introduces user to program and how to operate it.
 print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
 print("---------------------\n")
