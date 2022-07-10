@@ -23,7 +23,7 @@ def start_game():
     If the user enters anything other than 'y' or 'n' the
     start_game function re-executes.
     """
-    play = input("Start Game? Y / N ")
+    play = input("Start Game? Y / N ").lower()
 
     if play == "y":
         main_game(player, cpu, player_score, cpu_score)
@@ -44,7 +44,7 @@ def main_game(player, cpu, player_score, cpu_score):
     """
     while player == False:
 
-        player = input("\nRock, Paper, Scissors?\n")
+        player = input("\nRock, Paper, Scissors?\n").lower()
         if player == cpu:
             print(f"{player} VS {cpu} \n")
             print("It's a DRAW!\n")
@@ -102,8 +102,10 @@ def main():
     main_game(player, cpu, player_score, cpu_score)
 
 
+# Introduces user to program.
 print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
-print("---------------------")
+print("---------------------\n")
+print("Welcome to Rock, Paper, Scissors!")
 
 main()
