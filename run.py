@@ -82,8 +82,7 @@ def main_game(player, cpu, player_score, cpu_score):
         player = False
         cpu = player_options[randint(0, 2)]
         # Display scores.
-        print(f"Your Score: {player_score}")
-        print(f"CPU Score: {cpu_score}")
+        print(f"Your Score: {player_score}\nCPU Score: {cpu_score}")
 
         # If statement to check if either player scores 5.
         if player_score == 5:
@@ -107,5 +106,6 @@ print("\n---------------------")
 print("ROCK, PAPER, SCISSORS")
 print("---------------------\n")
 print("Welcome to Rock, Paper, Scissors!")
+print("Type your choice of weapon and hit enter.\nFirst to 5 wins!")
 
 main()
