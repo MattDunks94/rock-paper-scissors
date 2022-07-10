@@ -30,7 +30,7 @@ def start_game():
     elif play == "n":
         quit()
     else:
-        print("\nNot a valid answer. Please try again.\n")
+        print(f"\n{play} is not a valid response. Please try again.\n")
         start_game()
 
 
