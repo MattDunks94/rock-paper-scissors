@@ -78,8 +78,10 @@ def main_game(player, cpu, player_score, cpu_score):
         else:
             print("\nWe do not have that in our inventory!")
             print("Please choose 1 of the 3 options available.\n")
+        # Re-assign player and cpu values to restart the while loop.
         player = False
         cpu = player_options[randint(0, 2)]
+        # Display scores.
         print(f"Your Score: {player_score}")
         print(f"CPU Score: {cpu_score}")
 
