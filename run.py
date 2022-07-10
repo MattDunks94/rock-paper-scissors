@@ -8,6 +8,7 @@ player_options = ["rock", "paper", "scissors"]
 player_score = 0
 cpu_score = 0
 
+# Assign player/user to False.
 player = False
 
 # Assign the opposition to a random list item from player_options.
@@ -35,55 +36,54 @@ def start_game():
 
 def main_game(player, cpu, player_score, cpu_score):
     """
-    Create a while loop and use if/else statements to
-    check every possible combination of game outcomes.
-    Included print statements to display game scores/result
-    and player options used.
+    A while loop and if/else statements to check every possible
+    combination of game outcomes. Also updates score for both the user
+    and cpu. An if statement at the end of the loop checks whether player
+    or cpu has scored 5. If so the start_game function executes, allowing
+    the user to end or restart game.
     """
     while player == False:
 
         player = input("\nRock, Paper, Scissors?\n")
         if player == cpu:
-            print(player, "VS", cpu, "\n")
+            print(f"{player} VS {cpu} \n")
             print("It's a DRAW!\n")
         elif player == "rock":
             if cpu == "paper":
-                print(player, "VS", cpu, "\n")
-                print("You LOSE!", cpu, "covers", player, "\n")
+                print(f"{player} VS {cpu} \n")
+                print(f"You LOSE! {cpu} covers {player}.\n")
                 cpu_score += 1
             else:
-                print(player, "VS", cpu, "\n")
-                print("You WIN!", player, "crushes", cpu, "\n")
+                print(f"{player} VS {cpu} \n")
+                print(f"You WIN! {player} crushes {cpu}.\n")
                 player_score += 1
         elif player == "paper":
             if cpu == "scissors":
-                print(player, "VS", cpu, "\n")
-                print("You LOSE!", cpu, "slices", player, "\n")
+                print(f"{player} VS {cpu} \n")
+                print(f"You LOSE! {cpu} slices {player}.\n")
                 cpu_score += 1
             else:
-                print(player, "VS", cpu, "\n")
-                print("You WIN!", player, "covers", cpu, "\n")
+                print(f"{player} VS {cpu} \n")
+                print(f"You WIN! {player} covers {cpu}.\n")
                 player_score += 1
         elif player == "scissors":
             if cpu == "rock":
-                print(player, "VS", cpu, "\n")
-                print("You LOSE!", cpu, "crushes", player, "\n")
+                print(f"{player} VS {cpu} \n")
+                print(f"You LOSE! {cpu} crushes {player}.\n")
                 cpu_score += 1
             else:
-                print(player, "VS", cpu, "\n")
-                print("You WIN!", player, "slices", cpu, "\n")
+                print(f"{player} VS {cpu} \n")
+                print(f"You WIN! {player} slices {cpu}.\n")
                 player_score += 1
         else:
             print("\nWe do not have that in our inventory!")
             print("Please choose 1 of the 3 options available.\n")
         player = False
         cpu = player_options[randint(0, 2)]
-        print("Your Score:", player_score)
-        print("CPU Score:", cpu_score)
-            
+        print(f"Your Score: {player_score}")
+        print(f"CPU Score: {cpu_score}")
+
         # If statement to check if either player scores 5.
-        # The start_game function is executed along with a print statement
-        # displaying game result, when score reaches 5.
         if player_score == 5:
             print("You WIN!")
             start_game()
@@ -93,7 +93,9 @@ def main_game(player, cpu, player_score, cpu_score):
 
 
 def main():
-    # All functions into one main function.
+    """
+    All functions into one main function.
+    """
     start_game()
     main_game(player, cpu, player_score, cpu_score)
 
