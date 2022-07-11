@@ -4,13 +4,6 @@ from random import randint
 # Create player options list.
 player_options = ["rock", "paper", "scissors"]
 
-# Create player and cpu scores.
-player_score = 0
-cpu_score = 0
-
-# Assign player/user to False.
-player = False
-
 # Assign the opposition to a random list item from player_options.
 cpu = player_options[randint(0, 2)]
 
@@ -26,7 +19,7 @@ def start_game():
     play = input("Start Game? Y / N ").lower()
 
     if play == "y":
-        main_game(player, cpu, player_score, cpu_score)
+        main_game(cpu)
     elif play == "n":
         quit()
     else:
@@ -34,7 +27,7 @@ def start_game():
         start_game()
 
 
-def main_game(player, cpu, player_score, cpu_score):
+def main_game(cpu):
     """
     A while loop and if/else statements to check every possible
     combination of game outcomes. Also updates score for both the user
@@ -42,7 +35,19 @@ def main_game(player, cpu, player_score, cpu_score):
     or cpu has scored 5. If so the start_game function executes, allowing
     the user to end or restart game.
     """
-    while player == False:
+
+    # Assign player to False.
+    player = False
+    
+    # Input to allow player to enter their name.
+    player_name = input("Please enter player name: ")
+    print(player_name)
+
+    # Player and cpu scores.
+    player_score = 0
+    cpu_score = 0
+
+    while player is False:
 
         player = input("\nRock, Paper, Scissors?\n").lower()
         if player == cpu:
@@ -51,29 +56,29 @@ def main_game(player, cpu, player_score, cpu_score):
         elif player == "rock":
             if cpu == "paper":
                 print(f"{player} VS {cpu} \n")
-                print(f"You LOSE! {cpu} covers {player}.\n")
+                print(f"{player_name} LOSES! {cpu} covers {player}.\n")
                 cpu_score += 1
             else:
                 print(f"{player} VS {cpu} \n")
-                print(f"You WIN! {player} crushes {cpu}.\n")
+                print(f"{player_name} WINS! {player} crushes {cpu}.\n")
                 player_score += 1
         elif player == "paper":
             if cpu == "scissors":
                 print(f"{player} VS {cpu} \n")
-                print(f"You LOSE! {cpu} slices {player}.\n")
+                print(f"{player_name} LOSES! {cpu} slices {player}.\n")
                 cpu_score += 1
             else:
                 print(f"{player} VS {cpu} \n")
-                print(f"You WIN! {player} covers {cpu}.\n")
+                print(f"{player_name} WINS! {player} covers {cpu}.\n")
                 player_score += 1
         elif player == "scissors":
             if cpu == "rock":
                 print(f"{player} VS {cpu} \n")
-                print(f"You LOSE! {cpu} crushes {player}.\n")
+                print(f"{player_name} LOSES! {cpu} crushes {player}.\n")
                 cpu_score += 1
             else:
                 print(f"{player} VS {cpu} \n")
-                print(f"You WIN! {player} slices {cpu}.\n")
+                print(f"{player_name} WINS! {player} slices {cpu}.\n")
                 player_score += 1
         else:
             print("\nWe do not have that in our inventory!")
@@ -82,14 +87,14 @@ def main_game(player, cpu, player_score, cpu_score):
         player = False
         cpu = player_options[randint(0, 2)]
         # Display scores.
-        print(f"Your Score: {player_score}\nCPU Score: {cpu_score}")
+        print(f"{player_name}'s Score: {player_score}\nCPU Score: {cpu_score}")
 
         # If statement to check if either player scores 5.
         if player_score == 5:
-            print("You WIN!")
+            print(f"{player_name} WINS!")
             start_game()
         elif cpu_score == 5:
-            print("You LOST!")
+            print(f"{player_name} LOST!")
             start_game()
 
 
@@ -98,13 +103,13 @@ def main():
     All functions into one main function.
     """
     start_game()
-    main_game(player, cpu, player_score, cpu_score)
+    main_game(cpu)
 
 
 # Introduces user to program and how to operate it.
-print("\n---------------------")
+print("-" * 21)
 print("ROCK, PAPER, SCISSORS")
-print("---------------------\n")
+print("-" * 21, "\n")
 print("Welcome to Rock, Paper, Scissors!")
 print("Type your choice of weapon and hit enter.\nFirst to 5 wins!")
 
