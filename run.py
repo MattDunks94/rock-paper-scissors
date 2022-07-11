@@ -38,7 +38,6 @@ def main_game(cpu):
 
     # Assign player to False.
     player = False
-    
     # Input to allow player to enter their name.
     player_name = input("Please enter player name: ")
     print(player_name)
