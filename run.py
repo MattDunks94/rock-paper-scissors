@@ -16,7 +16,7 @@ def start_game():
     If the user enters anything other than 'y' or 'n' the
     start_game function re-executes along with a message.
     """
-    play = input("Start Game? Y / N ").lower()
+    play = input("Start Game? Y / N\n").lower()
 
     if play == "y":
         main_game(cpu)
@@ -39,7 +39,7 @@ def main_game(cpu):
     # Assign player to False.
     player = False
     # Input to allow player to enter their name.
-    player_name = input("Please enter player name: ")
+    player_name = input("Please enter player name:\n")
     print(player_name)
 
     # Player and cpu scores.
