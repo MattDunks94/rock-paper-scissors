@@ -110,6 +110,6 @@ print("-" * 21)
 print("ROCK, PAPER, SCISSORS")
 print("-" * 21, "\n")
 print("Welcome to Rock, Paper, Scissors!")
-print("Type your choice of weapon and hit enter.\nFirst to 5 wins!")
+print("Type in your choice of weapon and hit enter.\nFirst to 5 wins!")
 
 main()
