@@ -14,7 +14,7 @@ def start_game():
     If user types 'y' the main_game function is executed.
     If the user types 'n' the program will terminate.
     If the user enters anything other than 'y' or 'n' the
-    start_game function re-executes.
+    start_game function re-executes along with a message.
     """
     play = input("Start Game? Y / N ").lower()
 
