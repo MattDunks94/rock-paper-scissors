@@ -21,7 +21,7 @@
       <ul>
         <li>This feature enables the user to create a player name that is used throughout the game.</li>
       </ul>
-    <img src="assets/readme-images/">
+    <img src="assets/readme-images/player-name.png">
     <li></li>
     <li></li>
     <li></li>
