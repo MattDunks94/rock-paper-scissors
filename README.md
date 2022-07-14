@@ -28,20 +28,48 @@
     <li>Computers item choice.</li>
     <ul>
       <li>A scoring system updates the score after every round.</li>
-      <li>After each round is complete a message is present displaying the round result.</li>
+      <li>After each round is complete a message is presented displaying the result of that round.</li>
       <li>Once the player has entered their choice of 'weapon' and hit enter, the computers choice of item is revealed.</li>
     </ul>
     <img src="assets/readme-images/victory-score-example.png">
-    <img src="assets/readme-images/defeat-example.png">
+    <img src="assets/readme-images/defeat-example.png"><br>
     <img src="assets/readme-images/tie-example.png">
     <li>Input validation.</li>
     <ul>
       <li>User must enter a valid response, for when starting game and when choosing a 'weapon'.</li>
       <li>If user uses an invalid response, the programme displays an error message containg what the problem is.</li>
     </ul>
-    <em>(Invalid start response & error message.)</em>
-    <img src="assets/readme-images/invalid-start-example.png"><br>
-    <em>(Invalid item choice response & error message.)</em>
+    <img src="assets/readme-images/invalid-start-example.png">
     <img src="assets/readme-images/invalid-item-choice.png">
-    <li></li>
+    <li>Restart game.</li>
+    <ul>
+      <li>When the score of 5 points has been reached by either player, the final scores are displayed, along with a message and the chance to play again.</li>
+    </ul>
+    <img src="assets/readme-images/game-result.png">
   </ul>
+  
+  <h3>Future Features:</h3>
+  <ul>
+    <li>Total points to win setting.
+      <ul>
+        <li>Allow the user to set the limit of points to win a game.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Testing</h2>
+  
+  <p>I have tested this programme through the following methods:</p>
+  <ul>
+    <li>Passed code through a PEP8 linter and confirmed there are no problems.</li>
+    <li>Given invalid inputs/responses. Responded with incorrect options, out of bound inputs for example numbers and unrecognised words.</li>
+    <li>Tested in my local terminal and the Code Institute Heroku terminal.</li>
+  </ul>
+  
+  <h2>Bugs</h2>
+  <h3>Solved Bugs:</h3>
+  <ul>
+    <li>After writing the limited total of points to win the game feature and running the programme, I noticed that when a player won they got 1 point but then when playing the next move the scores were reset to 0. Originally I wrote this code outside the while loop but then realised it has to be within the loop to increment the players scores after every move.</li>
+    <li>Ending the game was a bit of an issue. I originally created a function outside the main_game function, and called it within the while loop, but this did not work. I wrote the code that i wrote within the endgame function, that was created, within the while loop and this solved the issue.<li>
+  </ul>
+  
