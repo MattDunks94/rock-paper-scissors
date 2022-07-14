@@ -32,6 +32,8 @@
       <li>Once the player has entered their choice of 'weapon' and hit enter, the computers choice of item is revealed.</li>
     </ul>
     <img src="assets/readme-images/victory-score-example.png">
+    <img src="assets/readme-images/defeat-example.png">
+    <img src="assets/readme-images/tie-example.png">
     <li>Input validation.</li>
     <ul>
       <li>User must enter a valid response, for when starting game and when choosing a 'weapon'.</li>
