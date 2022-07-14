@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors Application
 
-<p>Rock, Paper, Scissors application is a Python terminal game, based on the classic hand game, which runs in the Code Institute mock terminal on Heroku.</p>
+<p>Rock, Paper, Scissors application is a <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> terminal game, based on the classic hand game, which runs in the Code Institute mock terminal on <a href="https://en.wikipedia.org/wiki/Heroku">Heroku</a>.</p>
 <p>Users face the challenge of beating the computer by choosing between rock, paper or scissors.</p>
 <a href="https://rock-paper-scissors-python-app.herokuapp.com/">Live version of project.<a>
 <img src="assets/readme-images/responsive.png">
@@ -50,12 +50,15 @@
   
   <h3>Future Features:</h3>
   <ul>
-    <li>Total points to win setting.
+    <li>Total points to win limit setting.
       <ul>
-        <li>Allow the user to set the limit of points to win a game.</li>
+        <li>Allow the user to set their limit of points to win a game.</li>
       </ul>
     </li>
   </ul>
+  
+  <h2>Project Structure</h2>
+  <p>The structure of my project is solely based around a while loop. The loop contains all the key features including the scoring system, player input, invalid inputs and print statements.</p>
 
   <h2>Testing</h2>
   
@@ -70,6 +73,39 @@
   <h3>Solved Bugs:</h3>
   <ul>
     <li>After writing the limited total of points to win the game feature and running the programme, I noticed that when a player won they got 1 point but then when playing the next move the scores were reset to 0. Originally I wrote this code outside the while loop but then realised it has to be within the loop to increment the players scores after every move.</li>
-    <li>Ending the game was a bit of an issue. I originally created a function outside the main_game function, and called it within the while loop, but this did not work. I wrote the code that i wrote within the endgame function, that was created, within the while loop and this solved the issue.<li>
+    <li>Ending the game was a bit of an issue. I originally created a function outside the main_game function, and called it within the while loop, but this did not work. I wrote the code that i wrote within the endgame function, that was created, within the while loop and this solved the issue, allowing the player to restart or end the game.</li>
   </ul>
-  
+  <h3>Remaining Bugs:</h3>
+  <ul>
+    <li>The deployed version of the programme, visually, could be improved. All the text is up against the left side of the terminal, no space between text and side of terminal.</li>
+    <img src="assets/readme-images/deployed-app.png">
+  </ul>
+  <h3>Validator Testing:</h3>
+  <ul>
+    <li>Passed code through PEP8 linter.</li>
+    <ul>
+      <li>No errors were returned.</li>
+      <img src="assets/readme-images/pep8-result.png">
+    </ul>
+  </ul>
+
+<h2>Deployment</h2>
+<p>This project was deployed using Code Institute's mock terminal for Heroku.</p>
+<ul>
+<li>Deployment steps:</li>
+<ul>
+  <li>Cloned this repository</li>
+  <li>Create new Heroku app.</li>
+  <li>Set buildpacks to Python and <a href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a> in that order.</li>
+  <li>Link the Heroku app to my <a href="https://en.wikipedia.org/wiki/GitHub">github</a> repository.</li>
+  <li>Set a config var.</li>
+  <li>Click on <strong>Deploy Branch</strong>.</li>
+</ul>
+<ul>
+
+<h2>Credits</h2>
+<ul>
+<li><a href="https://codeinstitute.net/">Code Institute</a> for the deployment terminal.</li>
+<li><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> for details of the Rock, Paper, Scissors game.</li>
+<li><a href="https://thehelloworldprogram.com/python/python-game-rock-paper-scissors/">The Hello World Programme</a> for influencing me to create this project and as a stepping stone to get me started on the project.</li>
+</ul>
