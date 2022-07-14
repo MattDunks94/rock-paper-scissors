@@ -21,8 +21,25 @@
       <ul>
         <li>This feature enables the user to create a player name that is used throughout the game.</li>
       </ul>
-    
-    <li></li>
-    <li></li>
+    <img src="assets/readme-images/player-name.png">
+    <li>Play against the computer.</li>
+    <li>Scoring System.</li>
+    <li>Round result message.</li>
+    <li>Computers item choice.</li>
+    <ul>
+      <li>A scoring system updates the score after every round.</li>
+      <li>After each round is complete a message is present displaying the round result.</li>
+      <li>Once the player has entered their choice of 'weapon' and hit enter, the computers choice of item is revealed.</li>
+    </ul>
+    <img src="assets/readme-images/victory-score-example.png">
+    <li>Input validation.</li>
+    <ul>
+      <li>User must enter a valid response, for when starting game and when choosing a 'weapon'.</li>
+      <li>If user uses an invalid response, the programme displays an error message containg what the problem is.</li>
+    </ul>
+    <em>(Invalid start response & error message.)</em>
+    <img src="assets/readme-images/invalid-start-example.png"><br>
+    <em>(Invalid item choice response & error message.)</em>
+    <img src="assets/readme-images/invalid-item-choice.png">
     <li></li>
   </ul>
