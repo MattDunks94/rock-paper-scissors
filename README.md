@@ -94,7 +94,7 @@
 <ul>
 <li>Deployment steps:</li>
 <ul>
-  <li>Cloned this repository</li>
+  <li>Cloned this repository.</li>
   <li>Create new Heroku app.</li>
   <li>Set buildpacks to Python and <a href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a> in that order.</li>
   <li>Link the Heroku app to my <a href="https://en.wikipedia.org/wiki/GitHub">github</a> repository.</li>
