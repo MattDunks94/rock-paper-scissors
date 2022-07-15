@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors Application
 
 <p>Rock, Paper, Scissors application is a <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> terminal game, based on the classic hand game, which runs in the Code Institute mock terminal on <a href="https://en.wikipedia.org/wiki/Heroku">Heroku</a>.</p>
-<p>Users face the challenge of beating the computer by choosing between rock, paper or scissors.</p>
+<p>User faces the challenge of beating the computer by choosing between rock, paper or scissors.</p>
 <a href="https://rock-paper-scissors-python-app.herokuapp.com/">Live version of project.<a>
 <img src="assets/readme-images/responsive.png">
   <h2>How to play</h2>
