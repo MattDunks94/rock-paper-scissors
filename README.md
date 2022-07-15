@@ -43,7 +43,7 @@
     <img src="assets/readme-images/invalid-item-choice.png">
     <li>Restart game.</li>
     <ul>
-      <li>When the score of 5 points has been reached by either player, the final scores are displayed, along with a message and the chance to play again.</li>
+      <li>When the score of 5 points has been reached by either player, the final scores are displayed, along with a overall result message and the chance to play again.</li>
     </ul>
     <img src="assets/readme-images/game-result.png">
   </ul>
