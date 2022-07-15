@@ -11,7 +11,7 @@
   <ul>
     <li>Rock beats Scissors.</li>
     <li>Paper beats Rock.</li>
-    <li>Scissors beat Paper.</li>
+    <li>Scissors beats Paper.</li>
   </ul>
   
   <h2>Features</h2>
